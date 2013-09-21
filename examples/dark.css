@@ -1,0 +1,10 @@
+body {
+  background:#3d3d3d;
+}
+
+.btn {
+  border:0;
+  background:grey;
+  padding:10px 14px;
+  color:#ccc;
+}

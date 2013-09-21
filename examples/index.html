@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Theme</title>
+  <style>
+    .btn {
+      padding:10px 14px;
+    }
+    .btn:hover {
+      cursor:pointer;
+    }
+    .fun {
+      float:right;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle btn">Toggle theme</button>
+  <button class="fun btn">Some fun</button>
+  <script src="../build/build.js"></script>
+  <script>
+    var Theme = require('theme');
+    var bool = true;
+    var theme = new Theme();
+    theme.change('dark');
+
+    function toggleTheme(){
+      if(bool) {
+        theme.change('light');
+      } else {
+        theme.change('dark');
+      }
+      bool = !bool;
+    }
+
+    document.querySelector('.toggle').addEventListener('click', function(){
+      toggleTheme();
+    });
+
+    document.querySelector('.fun').addEventListener('click', function(){
+      setInterval(function(){
+        toggleTheme();
+      }, 60);
+    });
+
+  </script>
+</body>
+</html>

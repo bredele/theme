@@ -1,0 +1,10 @@
+body {
+  background:white;
+}
+
+.btn {
+  border:0;
+  background:#3d3d3d;
+  padding:10px 14px;
+  color:white;
+}
